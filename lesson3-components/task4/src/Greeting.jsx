@@ -6,9 +6,9 @@ import moment from 'moment';
 // 2 (firstName, lastName, birthDate) +++
 
 const Greeting = props => {
-  const numberYears = moment(props.user.birthDate).fromNow().slice(0, 2);
+  const numberYears = moment(props.birthDate).fromNow().slice(0, 2);
   return (
-    <div className="greeting">{`My name is ${props.user.firstName} ${props.user.lastName}. I'm ${numberYears} years old`}</div>
+    <div className="greeting">{`My name is ${props.firstName} ${props.lastName}. I'm ${numberYears} years old`}</div>
   );
 };
 

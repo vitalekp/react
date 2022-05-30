@@ -11,4 +11,7 @@ const user = {
   birthDate: new Date(2000, 11),
 };
 
-ReactDOM.render(<Greeting user={user} />, rootElem);
+ReactDOM.render(
+  <Greeting firstName={user.firstName} lastName={user.lastName} birthDate={user.birthDate} />,
+  rootElem,
+);
