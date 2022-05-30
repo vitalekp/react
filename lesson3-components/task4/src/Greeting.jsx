@@ -6,8 +6,7 @@ import moment from 'moment';
 // 2 (firstName, lastName, birthDate) +++
 
 const Greeting = (firstName, lastName, birthDate) => {
-  const numberYears = moment(birthDate).fromNow().split(' years ago');
-  console.log(numberYears);
+  const numberYears = moment(birthDate).fromNow().slice(0, 2);
   return (
     <div className="greeting">{`My name is ${firstName} ${lastName}. I'm ${numberYears} years old`}</div>
   );
