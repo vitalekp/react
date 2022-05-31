@@ -1,0 +1,13 @@
+.fancy-button {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(129, 189, 107);
+  outline: none;
+  border: none;
+  border-radius: 45%;
+  font-size: 18px;
+  color: #fff;
+  &:hover {
+    color: #000;
+  }
+}
