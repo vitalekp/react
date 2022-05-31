@@ -2,8 +2,8 @@ import React from 'react';
 import './button.scss';
 
 class GoodButton extends React.Component {
-  handleClick() {
-    return alert('Good job!');
+  handleClick(e) {
+    return alert(e.target.textContent);
   }
   render() {
     return (
