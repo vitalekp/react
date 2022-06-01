@@ -1,5 +1,5 @@
 import React from 'react';
-import UserGreeting from './userGreeting';
+import UserGreeting from './UserGreeting';
 import GuestGreeting from './GuestGreeting';
 
 const Greeting = ({ isLoggedIn }) => {
