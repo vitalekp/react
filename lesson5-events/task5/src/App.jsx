@@ -1,5 +1,5 @@
 import React from 'react';
-import Toogler from './Toogler';
+import Toggler from './Toggler';
 
 const App = () => {
   return <Toogler />;
