@@ -9,7 +9,7 @@ class Toogler extends React.Component {
     };
   }
 
-  buttonHandler = () => {
+  buttonStateHandler = () => {
     if (this.state.buttonState === 'Off') {
       this.setState({
         buttonState: 'On',
@@ -22,7 +22,7 @@ class Toogler extends React.Component {
 
   render() {
     return (
-      <div className="toggler" onClick={this.buttonHandler}>
+      <div className="toggler" onClick={this.buttonStateHandler}>
         {this.state.buttonState}
       </div>
     );
