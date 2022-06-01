@@ -11,42 +11,47 @@ class ColorPicker extends React.Component {
     super(props);
 
     this.state = {
-      color: '',
+      colorName: '',
     };
   }
 
-  showColorHandler = e => {
-    const arrClass = e.target.className.split('_');
-    const colorName = arrClass[arrClass.length - 1];
+  showColorHandler = color => {
     this.setState({
-      color: colorName[0].toUpperCase() + colorName.slice(1),
+      colorName: color,
     });
   };
+  // showColorHandler = e => {
+  //   const arrClass = e.target.className.split('_');
+  //   const colorName = arrClass[arrClass.length - 1];
+  //   this.setState({
+  //     colorName: colorName[0].toUpperCase() + colorName.slice(1),
+  //   });
+  // };
 
   clearColorHandler = () => {
     this.setState({
-      color: '',
+      colorName: '',
     });
   };
 
   render() {
     return (
       <div>
-        <div className="picker__title">{this.state.color}</div>
+        <div className="picker__title">{this.state.colorName}</div>
         <div>
           <button
             className="picker__button picker__button_coral"
-            onMouseOver={this.showColorHandler}
+            onMouseOver={() => this.showColorHandler('Coral')}
             onMouseOut={this.clearColorHandler}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onMouseOver={this.showColorHandler}
+            onMouseOver={() => this.showColorHandler('Aqua')}
             onMouseOut={this.clearColorHandler}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onMouseOver={this.showColorHandler}
+            onMouseOver={() => this.showColorHandler('Bisque')}
             onMouseOut={this.clearColorHandler}
           ></button>
         </div>
