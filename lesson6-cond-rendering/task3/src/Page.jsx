@@ -7,7 +7,7 @@ import Message from './Message';
 // 3 створити метод setText +++
 // 4 добавити на клік метод setText +++
 const text1 = 'Hello, world!';
-const text2 = 'Another exiciting text.';
+const text2 = 'Another exciting text.';
 
 class Page extends React.Component {
   state = {
