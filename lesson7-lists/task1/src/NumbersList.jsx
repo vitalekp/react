@@ -8,7 +8,7 @@ const NumbersList = ({ numbers }) => {
   return (
     <ul>
       {numbers.map(num => {
-        return <li>{num}</li>;
+        return <li key={Date.now()}>{num}</li>;
       })}
     </ul>
   );
