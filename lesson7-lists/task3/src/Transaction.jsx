@@ -3,6 +3,8 @@ import moment from 'moment';
 
 // ( { from, to, amount, rate, time } ) => render transaction
 
+const formatter = new Intl.NumberFormat('en-GB');
+
 const Transaction = ({ from, to, amount, rate, time }) => {
   console.log(from, to, amount, rate, time);
 
@@ -13,8 +15,8 @@ const Transaction = ({ from, to, amount, rate, time }) => {
       <span className="transaction__assets">
         {from} → {to}
       </span>
-      <span className="transaction__rate">{rate}</span>
-      <span className="transaction__amount">{new Intl.NumberFormat('en-GB').format(amount)}</span>
+      <span className="transaction__rate">{formatter.format(rate)}</span>
+      <span className="transaction__amount">{formatter.format(amount)}</span>
     </li>
   );
 };
