@@ -38,7 +38,9 @@ class Dimensions extends Component {
   };
 
   render() {
-    return <div className="dimensions">{`${this.state.width}px - ${this.state.height}px`}</div>;
+    const { width, height } = this.state;
+
+    return <div className="dimensions">{`${width}px - ${height}px`}</div>;
   }
 }
 
