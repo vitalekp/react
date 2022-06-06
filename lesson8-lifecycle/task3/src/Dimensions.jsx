@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 // 4 створити метод setDimensions, який дізнається розмір сторінки +++
 // 5 відписатий від подій WillUnmount() +++
 
-class Dimension extends Component {
+class Dimensions extends Component {
   state = {
     width: null,
     heigth: null,
@@ -42,4 +42,4 @@ class Dimension extends Component {
   }
 }
 
-export default Dimension;
+export default Dimensions;
