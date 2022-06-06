@@ -7,15 +7,14 @@ import React, { Component } from 'react';
 // 4 створити метод setDimensions, який дізнається розмір сторінки +++
 // 5 відписатий від подій WillUnmount() +++
 
-class Dimensions extends Component {
+class Dimensions extends React.Component {
   state = {
     width: null,
-    heigth: null,
+    height: null,
   };
 
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
-
     const { innerWidth, innerHeight } = window;
     this.setDimensions(innerWidth, innerHeight);
   }
@@ -26,19 +25,20 @@ class Dimensions extends Component {
 
   onResize = e => {
     const { innerWidth, innerHeight } = e.target;
+
     this.setDimensions(innerWidth, innerHeight);
   };
 
-  setDimensions = (width, heigth) => {
+  setDimensions = (width, height) => {
     this.setState({
       width,
-      heigth,
+      height,
     });
-    document.title = `${width} x ${heigth}`;
+    document.title = `${width} x ${height}`;
   };
 
   render() {
-    return <div className="dimensions">{`${this.state.width}px x ${this.state.heigth}px`}</div>;
+    return <div className="dimensions">{`${this.state.width}px - ${this.state.height}px`}</div>;
   }
 }
 
