@@ -34,12 +34,12 @@ class Dimension extends Component {
       innerWidth: width,
       innerHeight: heigth,
     });
-    document.title = `${innerHeight} x ${innerWidth}`;
+    document.title = `${innerWidth} x ${innerHeight}`;
   };
 
   render() {
     return (
-      <div className="dimensions">{`${this.state.innerHeight}px x ${this.state.innerWidth}px`}</div>
+      <div className="dimensions">{`${this.state.innerWidth}px x ${this.state.innerHeight}px`}</div>
     );
   }
 }
