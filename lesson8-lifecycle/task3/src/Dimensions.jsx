@@ -9,8 +9,8 @@ import React, { Component } from 'react';
 
 class Dimension extends Component {
   state = {
-    innerWidth: null,
-    innerHeight: null,
+    width: null,
+    heigth: null,
   };
 
   componentDidMount() {
@@ -31,16 +31,14 @@ class Dimension extends Component {
 
   setDimensions = (width, heigth) => {
     this.setState({
-      innerWidth: width,
-      innerHeight: heigth,
+      width,
+      heigth,
     });
     document.title = `${innerWidth} x ${innerHeight}`;
   };
 
   render() {
-    return (
-      <div className="dimensions">{`${this.state.innerWidth}px x ${this.state.innerHeight}px`}</div>
-    );
+    return <div className="dimensions">{`${this.state.width}px x ${this.state.heigth}px`}</div>;
   }
 }
 
