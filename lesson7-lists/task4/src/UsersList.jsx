@@ -1,0 +1,58 @@
+import React from 'react';
+import Pagination from './Pagination';
+import User from './User';
+
+// state
+// curPage
+
+class UsersList extends React.Component {
+  state = {
+    curPage: 1,
+  };
+
+  itemsPerPage = 3;
+
+  prevBtnHandler = () => {
+    this.setState({
+      curPage: this.state.curPage - 1,
+    });
+  };
+  nextBtnHandler = () => {
+    this.setState({
+      curPage: this.state.curPage + 1,
+    });
+  };
+
+  render() {
+    const users = this.props.users;
+
+    const { curPage } = this.state;
+    const { itemsPerPage } = this;
+    const { prevBtnHandler } = this;
+    const { nextBtnHandler } = this;
+
+    const startIndex = (curPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    const usersToRender = users.slice(startIndex, endIndex);
+    return (
+      <div>
+        <Pagination
+          curPage={curPage}
+          goPrev={prevBtnHandler}
+          goNext={nextBtnHandler}
+          totalItems={users.length}
+          itemPerPage={itemsPerPage}
+        />
+
+        <ul className="users">
+          {usersToRender.map(({ id, name, age }) => (
+            <User key={id} name={name} age={age} />
+          ))}
+        </ul>
+      </div>
+    );
+  }
+}
+
+export default UsersList;
