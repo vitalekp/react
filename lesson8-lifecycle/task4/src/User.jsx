@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // algo
-// 1 fetch => response => response.json()
+// 1 fetch => response => response.json() +++
 
 class User extends Component {
   state = {
@@ -23,16 +23,19 @@ class User extends Component {
   };
 
   render() {
-    if (!this.state.user) {
+    const { user } = this.state;
+    if (!user) {
       return null;
     }
 
+    const { avatar_url, location, name } = user;
+
     return (
       <div className="user">
-        <img alt="User Avatar" src={this.state.user.avatar_url} className="user__avatar"></img>
+        <img alt="User Avatar" src={avatar_url} className="user__avatar"></img>
         <div className="user__info">
-          <span className="user__name">{this.state.user.name} </span>
-          <span className="user__location">{this.state.user.location}</span>
+          <span className="user__name">{name} </span>
+          <span className="user__location">{location}</span>
         </div>
       </div>
     );
