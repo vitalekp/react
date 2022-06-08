@@ -26,7 +26,8 @@ class Search extends Component {
     });
   };
 
-  submitSearch = () => {
+  submitSearch = e => {
+    e.preventDefault();
     alert(`Search text: ${this.state.value}`);
   };
 
