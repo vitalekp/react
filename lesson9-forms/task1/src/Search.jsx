@@ -37,11 +37,9 @@ class Search extends Component {
     const { submitSearch } = this;
 
     return (
-      <form className="search">
+      <form className="search" onSubmit={submitSearch}>
         <input type="text" className="search__input" value={value} onChange={changeValueHandler} />
-        <button className="search__button" onClick={submitSearch}>
-          Search
-        </button>
+        <button className="search__button">Search</button>
       </form>
     );
   }
