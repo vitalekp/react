@@ -1,8 +1,8 @@
 import React from 'react';
-import User from './User';
+import ConnectionStatus from './ConnectionStatus';
 
 const App = () => {
-  return <User userId="facebook" />;
+  return <ConnectionStatus />;
 };
 
 export default App;
