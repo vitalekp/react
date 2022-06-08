@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Clock from './Clock';
 
-const time = [{ location: 'Lviv', offset: 2 }];
-
 class App extends Component {
   state = {
     visible: true,
