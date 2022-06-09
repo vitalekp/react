@@ -11,7 +11,6 @@ const users = [
   { id: 1234567, name: 'Jack', age: 19 },
   { id: 12345678, name: 'Bom', age: 21 },
   { id: 123456789, name: 'DOM', age: 22 },
-  { id: 123456789, name: 'DOM', age: 22 },
 ];
 
 const App = () => {

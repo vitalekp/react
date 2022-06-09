@@ -42,7 +42,7 @@ class UsersList extends React.Component {
           goPrev={prevBtnHandler}
           goNext={nextBtnHandler}
           totalItems={users.length}
-          itemPerPage={itemsPerPage}
+          itemsPerPage={itemsPerPage}
         />
 
         <ul className="users">
