@@ -26,7 +26,7 @@ class UsersList extends React.Component {
   render() {
     const users = this.props.users;
 
-    const { curPage } = this.state;
+    const { currentPage } = this.state;
     const { itemsPerPage } = this;
     const { prevBtnHandler } = this;
     const { nextBtnHandler } = this;
@@ -38,7 +38,7 @@ class UsersList extends React.Component {
     return (
       <div>
         <Pagination
-          currentPage={curPage}
+          currentPage={currentPage}
           goPrev={prevBtnHandler}
           goNext={nextBtnHandler}
           totalItems={users.length}
