@@ -41,8 +41,8 @@ class UserForm extends Component {
 
   render() {
     const { name, student, occupation, about } = this.state;
-    const { submitHandler } = this;
-    const { changeHandler } = this;
+    const { submitHandler, changeHandler } = this;
+
     return (
       <form className="login-form" onSubmit={submitHandler}>
         <h1 className="form-title">Profile</h1>
@@ -84,7 +84,7 @@ class UserForm extends Component {
           >
             <option value="london">London</option>
             <option value="new-york">New York</option>
-            <option value="coconut">Sidney</option>
+            <option value="sidney">Sidney</option>
             <option value="mango">Berlin</option>
           </select>
         </div>
