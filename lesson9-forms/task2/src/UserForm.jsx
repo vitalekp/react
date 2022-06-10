@@ -5,13 +5,13 @@ import React, { Component } from 'react';
 // 2. divide into components +
 // 3. static react version (верстка) +
 // 4. declare state (what, where) and props ++
-// 5. write logic
+// 5. write logic +++
 
 // algo
 // 1 onSubmit => console.log(object values)
 
 // props
-// obj(user)
+// createUser func
 
 // state
 // name, student, occupation, about
@@ -40,8 +40,11 @@ class UserForm extends Component {
   };
 
   render() {
+    const { name, student, occupation, about } = this.state;
+    const { submitHandler } = this;
+    const { changeHandler } = this;
     return (
-      <form className="login-form" onSubmit={this.submitHandler}>
+      <form className="login-form" onSubmit={submitHandler}>
         <h1 className="form-title">Profile</h1>
         <div className="form-control">
           <label className="form-label" htmlFor="name">
@@ -52,8 +55,8 @@ class UserForm extends Component {
             type="text"
             id="name"
             name="name"
-            value={this.state.name}
-            onChange={this.changeHandler}
+            value={name}
+            onChange={changeHandler}
           />
         </div>
         <div className="form-control">
@@ -65,8 +68,8 @@ class UserForm extends Component {
             type="checkbox"
             id="student"
             name="student"
-            value={this.state.student}
-            onChange={this.changeHandler}
+            value={student}
+            onChange={changeHandler}
           />
         </div>
         <div className="form-control">
@@ -76,8 +79,8 @@ class UserForm extends Component {
           <select
             name="occupation"
             className="form-input"
-            value={this.state.occupation}
-            onChange={this.changeHandler}
+            value={occupation}
+            onChange={changeHandler}
           >
             <option value="london">London</option>
             <option value="new-york">New York</option>
@@ -89,12 +92,7 @@ class UserForm extends Component {
           <label className="form-label" id="about" htmlFor="about">
             About
           </label>
-          <textarea
-            name="about"
-            className="form-input"
-            value={this.state.about}
-            onChange={this.changeHandler}
-          />
+          <textarea name="about" className="form-input" value={about} onChange={changeHandler} />
         </div>
         <button className="submit-button" type="submit">
           Submit
