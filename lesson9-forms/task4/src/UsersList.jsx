@@ -54,8 +54,6 @@ class UsersList extends Component {
       count: usersArr.length,
       users: usersArr,
     });
-
-    return usersArr;
   };
 
   render() {
