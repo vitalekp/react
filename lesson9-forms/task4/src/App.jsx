@@ -13,10 +13,8 @@ const users = [
   { id: 123456789, name: 'DOM', age: 22 },
 ];
 
-class App extends Component {
-  render() {
-    return <UsersList users={users} />;
-  }
-}
+const App = () => {
+  return <UsersList users={users} />;
+};
 
 export default App;
