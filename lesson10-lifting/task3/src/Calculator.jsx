@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TemperatureInput from './TemperatureInput';
+import BoilingVerdict from './BoilingVerdict';
 
 function toCelsius(fahrenheit) {
   return ((fahrenheit - 32) * 5) / 9;
@@ -51,6 +52,7 @@ class Calculator extends Component {
           temperature={fahrenheit}
           onTemperatureChange={handleFahrenheitChange}
         />
+        <BoilingVerdict celsius={parseFloat(temperature)} />
       </div>
     );
   }
