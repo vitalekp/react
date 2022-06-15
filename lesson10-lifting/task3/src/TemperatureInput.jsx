@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import BoilingVerdict from './BoilingVerdict';
 
 const scaleNames = {
-  c: 'Цельсия',
-  f: 'Фаренгейта',
+  c: 'Celsius',
+  f: 'Fahrenheit',
 };
 
 class TemperatureInput extends Component {
@@ -22,7 +22,7 @@ class TemperatureInput extends Component {
 
     return (
       <fieldset>
-        <legend>Введите температуру в градусах {scaleNames[scale]}:</legend>
+        <legend>Enter temperature in {scaleNames[scale]}:</legend>
         <input value={temperature} onChange={handleChange} />
         <BoilingVerdict celsius={parseFloat(temperature)} />
       </fieldset>
