@@ -5,6 +5,4 @@ import App from './App';
 
 const rootElement = document.querySelector('#root');
 
-const userId = 'facebook';
-
-ReactDOM.render(<App userId={userId} />, rootElement);
+ReactDOM.render(<App />, rootElement);
