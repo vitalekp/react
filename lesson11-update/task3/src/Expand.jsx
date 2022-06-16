@@ -8,24 +8,22 @@ class Expand extends Component {
     isOpen: false,
   };
 
-  toogleBlock = () => {
+  toogleBtn = () => {
     this.setState({
       isOpen: !this.state.isOpen,
     });
   };
 
   render() {
-    const { toogleBlock } = this;
+    const { toogleBtn } = this;
     const { isOpen } = this.state;
-    const expandContent = isOpen ? (
-      <div className="expand__content">{this.props.children}</div>
-    ) : null;
+    const { children, title } = this.props;
 
     return (
       <div className="expand border">
         <div className="expand__header">
-          <span className="expand__title">{this.props.title}</span>
-          <button className="expand__toggle-btn" onClick={toogleBlock}>
+          <span className="expand__title">{title}</span>
+          <button className="expand__toggle-btn" onClick={toogleBtn}>
             {isOpen ? (
               <i className="fa-solid fa-angle-up"></i>
             ) : (
@@ -33,7 +31,7 @@ class Expand extends Component {
             )}
           </button>
         </div>
-        {expandContent}
+        {isOpen ? <div className="expand__content">{children}</div> : null}
       </div>
     );
   }
