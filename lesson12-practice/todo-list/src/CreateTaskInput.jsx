@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+// 1 take text from input +
+// 2 create task with this text +
+// 3 add created task to the list +
+
 class CreateTaskInput extends Component {
   state = {
     value: 'ssss',
@@ -34,7 +38,3 @@ class CreateTaskInput extends Component {
 }
 
 export default CreateTaskInput;
-
-// 1 take text from input +
-// 2 create task with this text +
-// 3 add created task to the list

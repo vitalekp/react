@@ -52,15 +52,6 @@ class TasksList extends Component {
   // 3 save updated list +
   deleteTaskHandler = id => {
     deleteTask(id).then(() => this.fetchTasks());
-    // fetch(`${baseUrl}/${id}`, {
-    //   method: 'DELETE',
-    // }).then(response => {
-    //   if (response.ok) {
-    //     this.fetchTasksList();
-    //   } else {
-    //     throw new Error('Faild to delete task');
-    //   }
-    // });
   };
 
   render() {
