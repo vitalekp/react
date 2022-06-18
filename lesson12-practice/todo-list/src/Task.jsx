@@ -1,7 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const Task = ({ id, text, done, onChange, onDelete }) => {
+  console.log(text);
+
   return (
     <li className={classNames('list-item', { 'list-item_done': done })}>
       <input
@@ -14,6 +17,14 @@ const Task = ({ id, text, done, onChange, onDelete }) => {
       <button className="list-item__delete-btn" onClick={() => onDelete(id)}></button>
     </li>
   );
+};
+
+Task.propTypes = {
+  id: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  done: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 export default Task;
