@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 class CreateTaskInput extends Component {
   state = {
-    value: 'ssss',
+    value: '',
   };
 
   changeHandler = e => {
@@ -17,6 +17,9 @@ class CreateTaskInput extends Component {
   };
 
   taskCreateHandler = () => {
+    if (!this.state.value) {
+      return null;
+    }
     this.props.onCreate(this.state.value);
     this.setState({
       value: '',

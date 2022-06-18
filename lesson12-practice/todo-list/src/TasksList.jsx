@@ -24,7 +24,6 @@ class TasksList extends Component {
     // 1 create task obj +
     // 2 post obj to server +
     // 3 fetch list from server +
-    // const { tasks } = this.state;
     const newTask = {
       text,
       done: false,
