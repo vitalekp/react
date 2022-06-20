@@ -38,7 +38,7 @@ const Dimensions = () => {
     window.addEventListener('resize', resizeHandler);
 
     return () => {
-      window.removeEventListener('resize', dimensionHandler);
+      window.removeEventListener('resize', resizeHandler);
     };
   }, []);
   return <div className="dimensions">{`${width}px - ${height}px`}</div>;
