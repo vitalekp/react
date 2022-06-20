@@ -20,16 +20,10 @@ const ConnectionStatus = () => {
 
   useEffect(() => {
     const onlineHandler = () => {
-      setStatus({
-        status: true,
-        statusName: 'online',
-      });
+      setStatus(true);
     };
     const offlineHandler = () => {
-      setStatus({
-        status: false,
-        statusName: 'offline',
-      });
+      setStatus(false);
     };
 
     window.addEventListener('online', onlineHandler);
