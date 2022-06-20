@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 // 0. create project +
 // 1. male static layout (верстка) +
@@ -7,8 +8,8 @@ import React, { useState, useEffect } from 'react';
 // 4. declare state (what, where) and props ++
 //5. write logic +++
 
-const User = ({ match }) => {
-  const { usersId } = match.params;
+const User = () => {
+  const { usersId } = useParams();
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
